@@ -13,6 +13,7 @@
   if (!python_packages) {
     # Retrieve the environment variable
     git_repo_token <- Sys.getenv("GIT_REPO_TOKEN")
+    env <- Sys.getenv("ENVIRONMENT", "main")
 
     # Check if the GIT_REPO_TOKEN is set
     if (git_repo_token == "") {
@@ -20,7 +21,7 @@
     }
 
     # Install the Python package
-    package_url <- paste0("git+https://Steritas:", git_repo_token, "@github.com/Steritas/steritas_gti.git")
+    package_url <- paste0("git+https://Steritas:", git_repo_token, "@github.com/Steritas/steritas_gti.git@", env)
     reticulate::py_install(package_url, pip=TRUE)
   }
 }

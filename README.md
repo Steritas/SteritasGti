@@ -24,7 +24,7 @@ You should already have installed devtools. To install, it
 Linux/Max
 
 ```
-EXPORT GIT_REPO_TOKEN = <ActualToken>
+export GIT_REPO_TOKEN = <ActualToken>
 ```
 
 Windows:
@@ -36,7 +36,7 @@ set GIT_REPO_TOKEN = <ActualToken>
 You can install this package using devtools, inside R console:
 
 ```
-devtools::install_github("Steritas/SteritasGti")S
+devtools::install_github("Steritas/SteritasGti")
 ```
 
 ## Usage
