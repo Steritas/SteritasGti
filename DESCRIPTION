@@ -10,3 +10,4 @@ License: MIT License
 Encoding: UTF-8
 LazyData: true
 imports: reticulate, devtools
+RoxygenNote: 7.2.3

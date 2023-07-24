@@ -17,7 +17,6 @@
 #' }
 calculate_score <- function(input_subjects, baseline = "previous", include = list(), output_format = NULL,
                             algorithm = "agti", unit = 0, fill_missing = FALSE) {
-  reticulate::use_miniconda("r-reticulate", required = TRUE)
 
   st <- reticulate::import("steritas_gti")
 

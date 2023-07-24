@@ -1,12 +1,11 @@
 .onLoad <- function(libname, pkgname) {
-  # Check if r-reticulate exists in users environments
-  if (!("r-reticulate" %in% reticulate::conda_list()$name)) {
-    # Install miniconda if it's not installed
-    reticulate::install_miniconda()
+  # Check if environment exists
+  envs <- reticulate::conda_list()
+  if (!"r-reticulate" %in% envs$name) {
+    reticulate::conda_create(envname = "r-reticulate", python_version = "3.10")
   }
 
-  # Use miniconda environment
-  reticulate::use_miniconda("r-reticulate", required = TRUE)
+  reticulate::use_condaenv("r-reticulate", required = TRUE)
 
   # Check if the Python package is installed
   python_packages <- reticulate::py_module_available("steritas_gti")
