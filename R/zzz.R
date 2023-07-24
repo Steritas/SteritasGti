@@ -13,7 +13,7 @@
   if (!python_packages) {
     # Retrieve the environment variable
     git_repo_token <- Sys.getenv("GIT_REPO_TOKEN")
-    env <- Sys.getenv("ENVIRONMENT", "main")
+    env <- Sys.getenv("GIT_BRANCH", "main")
 
     # Check if the GIT_REPO_TOKEN is set
     if (git_repo_token == "") {
