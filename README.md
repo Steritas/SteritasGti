@@ -18,6 +18,11 @@ To use this library, call the gti function with the appropriate input. The funct
 
 You should already have installed devtools. To install, it
 
+```
+install.packages("devtools")
+```
+
+You must also have installed Conda, if you haven't already. You can use the following [link](https://docs.conda.io/en/latest/miniconda.html)
 
 ## Installation
 
